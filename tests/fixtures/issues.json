@@ -56,11 +56,6 @@
     "description": "#54: 2017a update - Phenix City, AL"
   }, {
     "zid": "America/Chicago",
-    "lat": 44.370520,
-    "lon": -100.388835,
-    "description": "#54: 2017a update - Fort Pierre, SD"
-  }, {
-    "zid": "America/Chicago",
     "lat": 29.932750,
     "lon": -85.398084,
     "description": "#72: 2017c update - Issue w/ Mexico Beach, FL"
@@ -140,9 +135,9 @@
     "lon": 31.416836,
     "description": "#89 - 2019a - test for zone Asia/Khartoum in Sudanese part of Lake Nasser"
   }, {
-    "zid": "America/Adak",
-    "lat": 52.031192,
-    "lon": 178.913872,
+    "zid": ["Africa/Johannesburg", "Antarctica/McMurdo"],
+    "lat": -86,
+    "lon": 0,
     "description": "#90 - some file-based data was showing up as non-polygon geojson"
   }, {
     "zids": ["Africa/Johannesburg", "Antarctica/McMurdo", "Etc/UTC"],
@@ -164,11 +159,6 @@
     "lat": 64.900980,
     "lon": -125.572725,
     "description": "#106 - 2020a - test for expanded America/Inuvik timezone"
-  }, {
-    "zid": "America/Yellowknife",
-    "lat": 61.164993,
-    "lon": -113.675715,
-    "description": "#106 - 2020a - test for America/Yellowknife timezone"
   }, {
     "zid": "America/Edmonton",
     "lat": 53.277915,
@@ -195,16 +185,6 @@
     "lon": -91.621826,
     "description": "#106 - 2020a - test for America/Atikokan timezone"
   }, {
-    "zid": "America/Rainy_River",
-    "lat": 51.024131,
-    "lon": -93.820274,
-    "description": "#106 - 2020a - test for America/Rainy_River timezone"
-  }, {
-    "zid": "America/Nipigon",
-    "lat": 49.688972,
-    "lon": -83.665001,
-    "description": "#106 - 2020a - test for America/Nipigon timezone"
-  }, {
     "zid": "America/Halifax",
     "lat": 48.011834,
     "lon": -66.702759,
@@ -219,5 +199,95 @@
     "lat": 43.000384,
     "lon": 41.021173,
     "description": "#106 - 2020a - test for overlapping zones in Abkhazia area"
+  }, {
+    "zid": "Europe/Kyiv",
+    "lat": 48.60915,
+    "lon": 22.29949,
+    "description": "#146 - 2022d - test for Europe/Kyiv timezone (formerly Europe/Uzhgorod)"
+  }, {
+    "zid": "Europe/Kyiv",
+    "lat": 47.79539,
+    "lon": 35.18682,
+    "description": "#146 - 2022d - test for Europe/Kyiv timezone (formerly Europe/Zaporozhye)"
+  }, {
+    "zid": "America/Winnipeg",
+    "lat": 48.72,
+    "lon": -94.564,
+    "description": "#148 - 2022f - test for America/Winnipeg timezone (formerly America/Rainy_River)"
+  }, {
+    "zid": "America/Toronto",
+    "lat": 49,
+    "lon": -88.313,
+    "description": "#148 - 2022f - test for America/Toronto (formerly America/Nipigon timezone)"
+  }, {
+    "zid": "America/Toronto",
+    "lat": 48.44,
+    "lon": -89.2,
+    "description": "#148 - 2022f - test for America/Toronto (formerly America/Thunder_Bay timezone)"
+  }, {
+    "zid": "America/Matamoros",
+    "lat": 28.34804,
+    "lon": -100.85401,
+    "description": "#148 - 2022f - test for America/Matamoros"
+  }, {
+    "zid": "America/Monterrey",
+    "lat": 26.06374,
+    "lon": -99.19651,
+    "description": "#148 - 2022f - test for America/Monterrey"
+  }, {
+    "zid": "America/Iqaluit",
+    "lat": 66.1497,
+    "lon": -65.70026,
+    "description": "#153 - 2022f - test for America/Iqaluit"
+  }, {
+    "zid": "America/Ciudad_Juarez",
+    "lat": 31.74401,
+    "lon": -106.48677,
+    "description": "#153 - 2022f - test for America/Ciudad_Juarez"
+  }, {
+    "zid": "America/Edmonton",
+    "lat": 61.164993,
+    "lon": -113.675715,
+    "description": "#158 - 2023b - test for America/Edmonton (formerly America/Yellowknife timezone)"
+  }, {
+    "zid": "Asia/Magadan",
+    "lat": 43.959242,
+    "lon": 145.681231,
+    "description": "#158 - 2023b - test for Asia/Magadan (formerly Asia/Ust-Nera timezone)"
+  }, {
+    "zid": "Asia/Yakutsk",
+    "lat": 75.766734,
+    "lon": 137.576917,
+    "description": "#158 - 2023b - test for Asia/Yakutsk (formerly Asia/Vladivostok timezone)"
+  }, {
+    "zid": "Europe/Oslo",
+    "lat": 70.922533, 
+    "lon": -8.714836,
+    "description": "#158 - 2023b - test for Europe/Oslo"
+  }, {
+    "zid": "Asia/Ulaanbaatar",
+    "lat": 46.38025,    
+    "lon": 96.22243,
+    "description": "#174 - 2024b - test for Asia/Ulaanbaatar"
+  }, {
+    "zid": "Asia/Ulaanbaatar",
+    "lat": 49.87329,    
+    "lon": 115.73496,
+    "description": "#174 - 2024b - test for Asia/Ulaanbaatar"
+  }, {
+    "zid": "Asia/Hovd",
+    "lat": 47.96326,    
+    "lon": 91.62525,
+    "description": "#174 - 2024b - test for Asia/Hovd"
+  }, {
+    "zid": "America/Coyhaique",
+    "lat": -45.571177,    
+    "lon": -72.068456,
+    "description": "#187 - 2025b - test for America/Coyhaique"
+  }, {
+    "zid": "America/Denver",
+    "lat": 44.370520,
+    "lon": -100.388835,
+    "description": "Fort Pierre, SD updates on OSM reflected official boundaries"
   }
 ]
