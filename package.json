@@ -1,6 +1,6 @@
 {
-  "name": "geo-tz",
-  "version": "0.0.0-semantically-released",
+  "name": "@tubular/geo-tz",
+  "version": "8.1.4",
   "description": "A node.js module to find the timezone at specific gps coordinates",
   "keywords": [
     "timezone"

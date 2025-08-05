@@ -1,5 +1,4 @@
 import * as fs from 'fs'
-import * as path from 'path'
 
 import { decode } from 'geobuf'
 import inside from '@turf/boolean-point-in-polygon'
@@ -13,12 +12,9 @@ type MapLike = {
   set(key: string, value: any): void
 }
 
-const FEATURE_FILE_PATH =
-  process.env.GTZ_FEATURE_FILE_PATH ||
-  path.join(__dirname, '..', 'data', 'geo.dat')
-let featureCache
+const FEATURE_FILE_PATH = process.env.GTZ_FEATURE_FILE_PATH;
 
-type CacheOptions = {
+export type CacheOptions = {
   /**
    * If set to true, all features will be loaded into memory to shorten future lookup
    * times.
@@ -35,7 +31,7 @@ type CacheOptions = {
  *
  * @param tzData The index data of the timezeone data product
  * @param {string} featureFilePath The path to the binary geo.dat file for the timezeone data product
- * @param {CacheOptions} options cachine options.
+ * @param {CacheOptions} options caching options.
  */
 export function setCacheLevel(
   tzData: any,
@@ -82,7 +78,7 @@ function _preCache(
   featureFileFd: number,
   featureCache: MapLike,
 ) {
-  // shoutout to github user @magwo for an initial version of this recursive function
+  // shoutout to GitHub user @magwo for an initial version of this recursive function
   function preloadFeaturesRecursive(curTzData, quadPos: string) {
     if (curTzData.pos >= 0 && curTzData.len) {
       const geoJson = loadFeatures(
@@ -120,7 +116,7 @@ function loadFeatures(
 ) {
   let featureFileFd = fd
   if (featureFileFd < 0) {
-    featureFileFd = fs.openSync(featureFilePath, 'r')
+    featureFileFd = fs.openSync(FEATURE_FILE_PATH || featureFilePath, 'r')
     if (featureFileFd < 0) {
       throw new Error('Failed to open geo.dat file')
     }
@@ -153,7 +149,7 @@ function loadFeatures(
  * @param featureCache The appropriate featureCache to use
  * @param featureFilePath The appropriate featureFilePath to use
  * @param lat latitude (must be >= -90 and <=90)
- * @param lon longitue (must be >= -180 and <=180)
+ * @param lon longitude (must be >= -180 and <=180)
  * @returns An array of string of TZIDs at the given coordinate.
  */
 export function findUsingDataset(

@@ -17,7 +17,7 @@ let featureCache
  * 1970 than similar zones that otherwise share the same timekeeping method since 1970.
  *
  * @param lat latitude (must be >= -90 and <=90)
- * @param lon longitue (must be >= -180 and <=180)
+ * @param lon longitude (must be >= -180 and <=180)
  * @returns An array of strings of TZIDs at the given coordinate.
  */
 export function find(lat: number, lon: number): string[] {
@@ -27,7 +27,7 @@ export function find(lat: number, lon: number): string[] {
 /**
  * Set caching behavior.
  *
- * @param {CacheOptions} options cachine options.
+ * @param {CacheOptions} options caching options.
  */
 function cacheLevel(options?: CacheOptions) {
   featureCache = setCacheLevel(TZ_DATA, FEATURE_FILE_PATH, options)
